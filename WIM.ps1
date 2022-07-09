@@ -24,7 +24,7 @@
 #region Parameters
 param(
 	# (Optional) The title to display on the application window.
-	[string]$AppTitle = "Fido - Retail Windows ISO Downloader",
+	[string]$AppTitle = "IT-TALK/M4S - Retail Windows ISO Downloader",
 	# (Optional) '|' separated UI localization strings.
 	[string]$LocData,
 	# (Optional) Path to a file that should be used for the UI icon.
