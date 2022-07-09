@@ -80,6 +80,7 @@ $code = @"
 
 if (!$Cmd) {
 	Write-Host Please Wait...
+	Write-Host IT-TALK x M4s YOU ARE ROCK!!!
 	if ($host.version -ge "7.0") {
 		Add-Type -WarningAction Ignore -IgnoreWarnings -MemberDefinition $code -Namespace Gui -UsingNamespace System.Runtime, System.IO, System.Text, System.Drawing, System.Globalization -ReferencedAssemblies System.Drawing.Common -Name Utils -ErrorAction Stop
 	} else {
