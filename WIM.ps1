@@ -24,7 +24,7 @@
 #region Parameters
 param(
 	# (Optional) The title to display on the application window.
-	[string]$AppTitle = " IT-TALK/M4S - Retail Windows ISO Downloader",
+	[string]$AppTitle = "Fido - Retail Windows ISO Downloader",
 	# (Optional) '|' separated UI localization strings.
 	[string]$LocData,
 	# (Optional) Path to a file that should be used for the UI icon.
@@ -80,8 +80,6 @@ $code = @"
 
 if (!$Cmd) {
 	Write-Host Please Wait...
-	Write-Host Thanks to : FIDO x RUFUS x M4S - IT_TALK!! YOU GUYS ROCKKK!!!!!
-	Write-Host 
 	if ($host.version -ge "7.0") {
 		Add-Type -WarningAction Ignore -IgnoreWarnings -MemberDefinition $code -Namespace Gui -UsingNamespace System.Runtime, System.IO, System.Text, System.Drawing, System.Globalization -ReferencedAssemblies System.Drawing.Common -Name Utils -ErrorAction Stop
 	} else {
@@ -92,6 +90,7 @@ if (!$Cmd) {
 	[Gui.Utils]::ShowWindow(([System.Diagnostics.Process]::GetCurrentProcess() | Get-Process).MainWindowHandle, 0) | Out-Null
 }
 #endregion
+
 
 #HELLOOO THEREE!!!
 # Welcome to WIM - Windows ISO Manager! 
@@ -610,7 +609,6 @@ if ($Cmd) {
 $EnglishMessages = "en-US|Version|Release|Edition|Language|Architecture|Download|Continue|Back|Close|Cancel|Error|Please wait...|" +
 	"Download using a browser|Temporarily banned by Microsoft for requesting too many downloads - Please try again later...|" +
 	"PowerShell 3.0 or later is required to run this script.|Do you want to go online and download it?"
-	"Thanks to : FIDO x RUFUS x M4S - IT_TALK!! YOU GUYS ROCKKK!!!!!"
 [string[]]$English = $EnglishMessages.Split('|')
 [string[]]$Localized = $null
 if ($LocData -and (-not $LocData.StartsWith("en-US"))) {
@@ -1036,6 +1034,7 @@ if ($Locale.StartsWith("ar") -or $Locale.StartsWith("fa") -or $Locale.StartsWith
 $WindowsVersionTitle.Text = Get-Translation("Version")
 $Continue.Content = Get-Translation("Continue")
 $Back.Content = Get-Translation("Close")
+
 # Populate the Windows versions
 $i = 0
 $versions = @()
@@ -1066,7 +1065,6 @@ $Continue.add_click({
 			$releases = Get-Windows-Releases $WindowsVersion.SelectedValue.Index
 			$script:WindowsRelease = Add-Entry $Stage "Release" $releases
 			$Back.Content = Get-Translation($English[8])
-			$Ver.Content = Get-Translation($English[8])
 			$XMLForm.Title = $AppTitle
 		}
 
@@ -1152,9 +1150,6 @@ $Back.add_click({
 		} else {
 			$Continue.Content = Get-Translation("Continue")
 			Refresh-Control($Continue)
-		}else {
-			$Ver.Content = Get-Translation("Version")
-			Refresh-Control($Ver)
 		}
 	}
 })
