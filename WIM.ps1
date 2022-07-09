@@ -93,6 +93,13 @@ if (!$Cmd) {
 }
 #endregion
 
+#HELLOOO THEREE!!!
+# Welcome to WIM - Windows ISO Manager! 
+# IM Rewrite this code from https://github.com/pbatard/Fido
+# Thank you to : PBatard, RUFUS 
+# YOU ARE ROCKKK!!!!
+
+
 #region Data
 $zh = 0x10000
 $ko = 0x20000
