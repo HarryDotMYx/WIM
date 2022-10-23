@@ -103,7 +103,7 @@ if (!$Cmd) {
 # IM Rewrite this code from https://github.com/pbatard/Fido
 # Thank you to : PBatard, RUFUS 
 # YOU ARE ROCKKK!!!!
-
+# Veryy thanks to PBATARD A.k.A Fido
 
 $zh = 0x10000
 $ko = 0x20000
